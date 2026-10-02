@@ -1,0 +1,2027 @@
+[
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.702108,
+        35.659219
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 101,
+      "name": "Shibuya",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.712098,
+        35.665283
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 102,
+      "name": "Omote-sando",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.717825,
+        35.670375
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 103,
+      "name": "Gaiemmae",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.724082,
+        35.672863
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 104,
+      "name": "Aoyama-itchome",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.7387,
+        35.677523
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 105,
+      "name": "Akasaka-mitsuke / Nagatacho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.742894,
+        35.673217
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 106,
+      "name": "Tameike-sanno / Kokkai-gijidomae",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.748947,
+        35.668745
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 107,
+      "name": "Toranomon / Toranomon Hills",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.758192,
+        35.667488
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 108,
+      "name": "Shimbashi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.765597,
+        35.673353
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 109,
+      "name": "Ginza / Ginza-itchome",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.77017,
+        35.676797
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 110,
+      "name": "Kyobashi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.773663,
+        35.682163
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 111,
+      "name": "Nihombashi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.773515,
+        35.686008
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 112,
+      "name": "Mitsukoshimae",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.77089,
+        35.693715
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 113,
+      "name": "Kanda",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.77177,
+        35.70284
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 114,
+      "name": "Suehirocho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.774578,
+        35.707127
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 115,
+      "name": "Ueno-hirokoji / Naka-okachimachi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.776172,
+        35.711612
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 116,
+      "name": "Ueno",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.78212,
+        35.711403
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 117,
+      "name": "Inaricho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.790347,
+        35.709907
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 118,
+      "name": "Tawaramachi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.797767,
+        35.710737
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 119,
+      "name": "Asakusa",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.61976,
+        35.704175
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 201,
+      "name": "Ogikubo",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.635575,
+        35.699455
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 202,
+      "name": "Minami-asagaya",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.64851,
+        35.69786
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 203,
+      "name": "Shin-koenji",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.658295,
+        35.697965
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 204,
+      "name": "Higashi-koenji",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.66951,
+        35.697475
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 205,
+      "name": "Shin-nakano",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.682205,
+        35.697085
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 206,
+      "name": "Nakano-sakaue",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.69256,
+        35.694515
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 207,
+      "name": "Nishi-shinjuku",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.70059,
+        35.69244
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 208,
+      "name": "Shinjuku",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.704398,
+        35.690732
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 209,
+      "name": "Shinjuku-sanchome",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.710915,
+        35.688525
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 210,
+      "name": "Shinjuku-gyoemmae",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.719325,
+        35.687835
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 211,
+      "name": "Yotsuya-sanchome",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.72985,
+        35.685114
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 212,
+      "name": "Yotsuya",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.751837,
+        35.673557
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 215,
+      "name": "Kasumigaseki",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.7648,
+        35.681935
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 217,
+      "name": "Tokyo",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.765068,
+        35.685872
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 218,
+      "name": "Otemachi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.766452,
+        35.695898
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 219,
+      "name": "Awajicho / Shin-ochanomizu",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.764405,
+        35.70043
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 220,
+      "name": "Ochanomizu",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.76011,
+        35.706753
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 221,
+      "name": "Hongo-sanchome",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.751423,
+        35.707871
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 222,
+      "name": "Korakuen",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.736895,
+        35.7172
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 223,
+      "name": "Myogadani",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.729407,
+        35.726093
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 224,
+      "name": "Shin-otsuka",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.709918,
+        35.730337
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 225,
+      "name": "Ikebukuro",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.657935,
+        35.683515
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 303,
+      "name": "Honancho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.668155,
+        35.69082
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 304,
+      "name": "Nakano-fujimicho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.674005,
+        35.691698
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 305,
+      "name": "Nakano-shimbashi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.698927,
+        35.644188
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 401,
+      "name": "Naka-meguro",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.70856,
+        35.646915
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 402,
+      "name": "Ebisu",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.722193,
+        35.651783
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 403,
+      "name": "Hiro-o",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.731155,
+        35.6628
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 404,
+      "name": "Roppongi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.744725,
+        35.662625
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 405,
+      "name": "Kamiyacho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.761035,
+        35.675022
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 408,
+      "name": "Hibiya / Yurakucho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.767412,
+        35.669323
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 410,
+      "name": "Higashi-ginza",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.773161,
+        35.669221
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 411,
+      "name": "Tsukiji / Shintomicho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.77742,
+        35.67551
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 412,
+      "name": "Hatchobori",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.779498,
+        35.67973
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 413,
+      "name": "Kayabacho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.783811,
+        35.684562
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 414,
+      "name": "Ningyocho / Suitengumae",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.778808,
+        35.690364
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 415,
+      "name": "Kodemmacho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.775527,
+        35.69793
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 416,
+      "name": "Akihabara",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.78455,
+        35.720675
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 419,
+      "name": "Iriya",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.791165,
+        35.729285
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 420,
+      "name": "Minowa",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.79878,
+        35.73231
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 421,
+      "name": "Minami-senju",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.804975,
+        35.749468
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 422,
+      "name": "Kita-senju",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.665605,
+        35.70574
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 501,
+      "name": "Nakano",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.685965,
+        35.710635
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 502,
+      "name": "Ochiai",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.705045,
+        35.71328
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 503,
+      "name": "Takadanobaba",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.72219,
+        35.70568
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 504,
+      "name": "Waseda",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.73452,
+        35.703865
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 505,
+      "name": "Kagurazaka",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.744552,
+        35.701433
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 506,
+      "name": "Iidabashi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.751238,
+        35.695802
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 507,
+      "name": "Kudanshita",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.75767,
+        35.69044
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 508,
+      "name": "Takebashi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.796248,
+        35.671828
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 512,
+      "name": "Monzen-nakacho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.807123,
+        35.669353
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 513,
+      "name": "Kiba",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.81768,
+        35.66959
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 514,
+      "name": "Toyocho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.831695,
+        35.668415
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 515,
+      "name": "Minami-sunamachi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.859355,
+        35.664583
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 516,
+      "name": "Nishi-kasai",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.872309,
+        35.66363
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 517,
+      "name": "Kasai",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.89314,
+        35.665855
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 518,
+      "name": "Urayasu",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.902398,
+        35.672832
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 519,
+      "name": "Minami-gyotoku",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.914463,
+        35.682848
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 520,
+      "name": "Gyotoku",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.924115,
+        35.690867
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 521,
+      "name": "Myoden",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.941915,
+        35.7033
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 522,
+      "name": "Baraki-nakayama",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.95875,
+        35.707315
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 523,
+      "name": "Nishi-funabashi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.679632,
+        35.668897
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 601,
+      "name": "Yoyogi-uehara",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.68965,
+        35.669123
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 602,
+      "name": "Yoyogi-koen",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.704523,
+        35.6687
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 603,
+      "name": "Meiji-jingumae",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.726215,
+        35.666593
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 605,
+      "name": "Nogizaka",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.73644,
+        35.672113
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 606,
+      "name": "Akasaka",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.76178,
+        35.680505
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 610,
+      "name": "Nijubashimae",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.76998,
+        35.706787
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 613,
+      "name": "Yushima",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.76575,
+        35.717325
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 614,
+      "name": "Nezu",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.763375,
+        35.725988
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 615,
+      "name": "Sendagi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.766963,
+        35.73239
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 616,
+      "name": "Nishi-nippori",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.780108,
+        35.742162
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 617,
+      "name": "Machiya",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.82489,
+        35.762285
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 619,
+      "name": "Ayase",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.832095,
+        35.77689
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 620,
+      "name": "Kita-ayase",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.612865,
+        35.78835
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 701,
+      "name": "Wakoshi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.63117,
+        35.77674
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 702,
+      "name": "Chikatetsu-narimasu",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.643597,
+        35.770217
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 703,
+      "name": "Chikatetsu-akatsuka",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.6543,
+        35.757555
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 704,
+      "name": "Heiwadai",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.66547,
+        35.74962
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 705,
+      "name": "Hikawadai",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.67952,
+        35.743395
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 706,
+      "name": "Kotake-mukaihara",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.6894,
+        35.738175
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 707,
+      "name": "Senkawa",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.69848,
+        35.733215
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 708,
+      "name": "Kanamecho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.718865,
+        35.72595
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 710,
+      "name": "Higashi-ikebukuro",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.72745,
+        35.71918
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 711,
+      "name": "Gokokuji",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.73413,
+        35.709295
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 712,
+      "name": "Edogawabashi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.736736,
+        35.692892
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 714,
+      "name": "Ichigaya",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.73735,
+        35.684785
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 715,
+      "name": "Kojimachi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.751814,
+        35.677442
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 717,
+      "name": "Sakuradamon",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.784523,
+        35.6646
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 721,
+      "name": "Tsukishima",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.79602,
+        35.655128
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 722,
+      "name": "Toyosu",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.81033,
+        35.645775
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 723,
+      "name": "Tatsumi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.826605,
+        35.64578
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 724,
+      "name": "Shin-kiba",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.741695,
+        35.68538
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 805,
+      "name": "Hanzomon",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.757827,
+        35.695915
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 807,
+      "name": "Jimbocho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.799742,
+        35.682115
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 811,
+      "name": "Kiyosumi-shirakawa",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.81568,
+        35.688603
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 812,
+      "name": "Sumiyoshi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.814937,
+        35.697703
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 813,
+      "name": "Kinshicho",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.81369,
+        35.708683
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 814,
+      "name": "Oshiage",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.71566,
+        35.632485
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 901,
+      "name": "Meguro",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.72586,
+        35.63777
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 902,
+      "name": "Shirokanedai",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.734285,
+        35.643145
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 903,
+      "name": "Shirokane-takanawa",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.737045,
+        35.65481
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 904,
+      "name": "Azabu-juban",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.7389,
+        35.665075
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 905,
+      "name": "Roppongi-itchome",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.757832,
+        35.718112
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 912,
+      "name": "Todaimae",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.753803,
+        35.724413
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 913,
+      "name": "Hon-komagome",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.746853,
+        35.73601
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 914,
+      "name": "Komagome",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.74226,
+        35.745945
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 915,
+      "name": "Nishigahara",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.737411,
+        35.754387
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 916,
+      "name": "Oji",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.7357,
+        35.76509
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 917,
+      "name": "Oji-kamiya",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.7325,
+        35.778025
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 918,
+      "name": "Shimo",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.72211,
+        35.783355
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 919,
+      "name": "Akabane-iwabuchi",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.714715,
+        35.7202
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 1010,
+      "name": "Zoshigaya",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.70916,
+        35.707993
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 1011,
+      "name": "Nishi-waseda",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.707897,
+        35.700107
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 1012,
+      "name": "Higashi-shinjuku",
+      "active": true
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "coordinates": [
+        139.705643,
+        35.678237
+      ],
+      "type": "Point"
+    },
+    "properties": {
+      "id": 1014,
+      "name": "Kita-sando",
+      "active": true
+    }
+  }
+]

@@ -1,0 +1,23 @@
+.custom-panel {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    /* Hiệu ứng mờ ảo */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !important;
+}
+
+.btn-primary {
+    border-radius: 50px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+#map {
+    height: 100vh;
+}

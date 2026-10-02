@@ -1,0 +1,32 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / temporary
+*.log
+scratchpad/
+tmp/
+temp/
+
+# Test/browser artifacts
+screenshots/
+playwright-report/
+test-results/
+
+# Original (pre-Tokyo) dataset kept locally only; not used at runtime
+backend/app/data/original_dataset_backup/

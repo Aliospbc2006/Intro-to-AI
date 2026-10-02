@@ -1,0 +1,187 @@
+route,seq,code,line,name_ja,name_en,complex,code_source
+G,1,G01,G,渋谷,Shibuya,,wikidata
+G,2,G02,G,表参道,Omote-sando,,wikidata
+G,3,G03,G,外苑前,Gaiemmae,,wikidata
+G,4,G04,G,青山一丁目,Aoyama-itchome,,wikidata
+G,5,G05,G,赤坂見附,Akasaka-mitsuke,Akasaka-mitsuke / Nagatacho,wikidata
+G,6,G06,G,溜池山王,Tameike-sanno,Tameike-sanno / Kokkai-gijidomae,wikidata
+G,7,G07,G,虎ノ門,Toranomon,Toranomon / Toranomon Hills,wikidata
+G,8,G08,G,新橋,Shimbashi,,wikidata
+G,9,G09,G,銀座,Ginza,Ginza / Ginza-itchome,wikidata
+G,10,G10,G,京橋,Kyobashi,,wikidata
+G,11,G11,G,日本橋,Nihombashi,,wikidata
+G,12,G12,G,三越前,Mitsukoshimae,,wikidata
+G,13,G13,G,神田,Kanda,,wikidata
+G,14,G14,G,末広町,Suehirocho,,wikidata
+G,15,G15,G,上野広小路,Ueno-hirokoji,Ueno-hirokoji / Naka-okachimachi,wikidata
+G,16,G16,G,上野,Ueno,,wikidata
+G,17,G17,G,稲荷町,Inaricho,,wikidata
+G,18,G18,G,田原町,Tawaramachi,,wikidata
+G,19,G19,G,浅草,Asakusa,,wikidata
+M,1,M01,M,荻窪,Ogikubo,,wikidata
+M,2,M02,M,南阿佐ヶ谷,Minami-asagaya,,wikidata
+M,3,M03,M,新高円寺,Shin-koenji,,wikidata
+M,4,M04,M,東高円寺,Higashi-koenji,,wikidata
+M,5,M05,M,新中野,Shin-nakano,,wikidata
+M,6,M06,M,中野坂上,Nakano-sakaue,,wikidata
+M,7,M07,M,西新宿,Nishi-shinjuku,,wikidata
+M,8,M08,M,新宿,Shinjuku,,wikidata
+M,9,M09,M,新宿三丁目,Shinjuku-sanchome,,wikidata
+M,10,M10,M,新宿御苑前,Shinjuku-gyoemmae,,wikidata
+M,11,M11,M,四谷三丁目,Yotsuya-sanchome,,wikidata
+M,12,M12,M,四ツ谷,Yotsuya,,wikidata
+M,13,M13,M,赤坂見附,Akasaka-mitsuke,Akasaka-mitsuke / Nagatacho,wikidata
+M,14,M14,M,国会議事堂前,Kokkai-gijidomae,Tameike-sanno / Kokkai-gijidomae,wikidata
+M,15,M15,M,霞ヶ関,Kasumigaseki,,wikidata
+M,16,M16,M,銀座,Ginza,Ginza / Ginza-itchome,wikidata
+M,17,M17,M,東京,Tokyo,,wikidata
+M,18,M18,M,大手町,Otemachi,,wikidata
+M,19,M19,M,淡路町,Awajicho,Awajicho / Shin-ochanomizu,wikidata
+M,20,M20,M,御茶ノ水,Ochanomizu,,wikidata
+M,21,M21,M,本郷三丁目,Hongo-sanchome,,wikidata
+M,22,M22,M,後楽園,Korakuen,,wikidata
+M,23,M23,M,茗荷谷,Myogadani,,wikidata
+M,24,M24,M,新大塚,Shin-otsuka,,wikidata
+M,25,M25,M,池袋,Ikebukuro,,wikidata
+Mb,1,M06,M,中野坂上,Nakano-sakaue,,junction
+Mb,2,Mb05,M,中野新橋,Nakano-shimbashi,,wikidata
+Mb,3,Mb04,M,中野富士見町,Nakano-fujimicho,,wikidata
+Mb,4,Mb03,M,方南町,Honancho,,wikidata
+H,1,H01,H,中目黒,Naka-meguro,,wikidata
+H,2,H02,H,恵比寿,Ebisu,,wikidata
+H,3,H03,H,広尾,Hiro-o,,wikidata
+H,4,H04,H,六本木,Roppongi,,wikidata
+H,5,H05,H,神谷町,Kamiyacho,,wikidata
+H,6,H06,H,虎ノ門ヒルズ,Toranomon Hills,Toranomon / Toranomon Hills,wikidata
+H,7,H07,H,霞ヶ関,Kasumigaseki,,wikidata
+H,8,H08,H,日比谷,Hibiya,Hibiya / Yurakucho,wikidata
+H,9,H09,H,銀座,Ginza,Ginza / Ginza-itchome,wikidata
+H,10,H10,H,東銀座,Higashi-ginza,,wikidata
+H,11,H11,H,築地,Tsukiji,Tsukiji / Shintomicho,wikidata
+H,12,H12,H,八丁堀,Hatchobori,,wikidata
+H,13,H13,H,茅場町,Kayabacho,,wikidata
+H,14,H14,H,人形町,Ningyocho,Ningyocho / Suitengumae,wikidata
+H,15,H15,H,小伝馬町,Kodemmacho,,wikidata
+H,16,H16,H,秋葉原,Akihabara,,wikidata
+H,17,H17,H,仲御徒町,Naka-okachimachi,Ueno-hirokoji / Naka-okachimachi,wikidata
+H,18,H18,H,上野,Ueno,,wikidata
+H,19,H19,H,入谷,Iriya,,wikidata
+H,20,H20,H,三ノ輪,Minowa,,wikidata
+H,21,H21,H,南千住,Minami-senju,,wikidata
+H,22,H22,H,北千住,Kita-senju,,wikidata
+T,1,T01,T,中野,Nakano,,wikidata
+T,2,T02,T,落合,Ochiai,,wikidata
+T,3,T03,T,高田馬場,Takadanobaba,,wikidata
+T,4,T04,T,早稲田,Waseda,,wikidata
+T,5,T05,T,神楽坂,Kagurazaka,,wikidata
+T,6,T06,T,飯田橋,Iidabashi,,wikidata
+T,7,T07,T,九段下,Kudanshita,,wikidata
+T,8,T08,T,竹橋,Takebashi,,wikidata
+T,9,T09,T,大手町,Otemachi,,wikidata
+T,10,T10,T,日本橋,Nihombashi,,wikidata
+T,11,T11,T,茅場町,Kayabacho,,wikidata
+T,12,T12,T,門前仲町,Monzen-nakacho,,wikidata
+T,13,T13,T,木場,Kiba,,wikidata
+T,14,T14,T,東陽町,Toyocho,,wikidata
+T,15,T15,T,南砂町,Minami-sunamachi,,wikidata
+T,16,T16,T,西葛西,Nishi-kasai,,wikidata
+T,17,T17,T,葛西,Kasai,,wikidata
+T,18,T18,T,浦安,Urayasu,,wikidata
+T,19,T19,T,南行徳,Minami-gyotoku,,wikidata
+T,20,T20,T,行徳,Gyotoku,,wikidata
+T,21,T21,T,妙典,Myoden,,wikidata
+T,22,T22,T,原木中山,Baraki-nakayama,,wikidata
+T,23,T23,T,西船橋,Nishi-funabashi,,wikidata
+C,1,C01,C,代々木上原,Yoyogi-uehara,,wikidata
+C,2,C02,C,代々木公園,Yoyogi-koen,,wikidata
+C,3,C03,C,明治神宮前,Meiji-jingumae,,wikidata
+C,4,C04,C,表参道,Omote-sando,,wikidata
+C,5,C05,C,乃木坂,Nogizaka,,wikidata
+C,6,C06,C,赤坂,Akasaka,,wikidata
+C,7,C07,C,国会議事堂前,Kokkai-gijidomae,Tameike-sanno / Kokkai-gijidomae,wikidata
+C,8,C08,C,霞ヶ関,Kasumigaseki,,wikidata
+C,9,C09,C,日比谷,Hibiya,Hibiya / Yurakucho,wikidata
+C,10,C10,C,二重橋前,Nijubashimae,,wikidata
+C,11,C11,C,大手町,Otemachi,,wikidata
+C,12,C12,C,新御茶ノ水,Shin-ochanomizu,Awajicho / Shin-ochanomizu,wikidata
+C,13,C13,C,湯島,Yushima,,wikidata
+C,14,C14,C,根津,Nezu,,wikidata
+C,15,C15,C,千駄木,Sendagi,,wikidata
+C,16,C16,C,西日暮里,Nishi-nippori,,wikidata
+C,17,C17,C,町屋,Machiya,,wikidata
+C,18,C18,C,北千住,Kita-senju,,wikidata
+C,19,C19,C,綾瀬,Ayase,,wikidata
+C,20,C20,C,北綾瀬,Kita-ayase,,wikidata
+Y,1,Y01,Y,和光市,Wakoshi,,wikidata
+Y,2,Y02,Y,地下鉄成増,Chikatetsu-narimasu,,wikidata
+Y,3,Y03,Y,地下鉄赤塚,Chikatetsu-akatsuka,,wikidata
+Y,4,Y04,Y,平和台,Heiwadai,,wikidata
+Y,5,Y05,Y,氷川台,Hikawadai,,wikidata
+Y,6,Y06,Y,小竹向原,Kotake-mukaihara,,wikidata
+Y,7,Y07,Y,千川,Senkawa,,wikidata
+Y,8,Y08,Y,要町,Kanamecho,,wikidata
+Y,9,Y09,Y,池袋,Ikebukuro,,wikidata
+Y,10,Y10,Y,東池袋,Higashi-ikebukuro,,wikidata
+Y,11,Y11,Y,護国寺,Gokokuji,,wikidata
+Y,12,Y12,Y,江戸川橋,Edogawabashi,,wikidata
+Y,13,Y13,Y,飯田橋,Iidabashi,,wikidata
+Y,14,Y14,Y,市ヶ谷,Ichigaya,,wikidata
+Y,15,Y15,Y,麹町,Kojimachi,,wikidata
+Y,16,Y16,Y,永田町,Nagatacho,Akasaka-mitsuke / Nagatacho,wikidata
+Y,17,Y17,Y,桜田門,Sakuradamon,,wikidata
+Y,18,Y18,Y,有楽町,Yurakucho,Hibiya / Yurakucho,official
+Y,19,Y19,Y,銀座一丁目,Ginza-itchome,Ginza / Ginza-itchome,wikidata
+Y,20,Y20,Y,新富町,Shintomicho,Tsukiji / Shintomicho,wikidata
+Y,21,Y21,Y,月島,Tsukishima,,wikidata
+Y,22,Y22,Y,豊洲,Toyosu,,wikidata
+Y,23,Y23,Y,辰巳,Tatsumi,,official
+Y,24,Y24,Y,新木場,Shin-kiba,,wikidata
+Z,1,Z01,Z,渋谷,Shibuya,,wikidata
+Z,2,Z02,Z,表参道,Omote-sando,,wikidata
+Z,3,Z03,Z,青山一丁目,Aoyama-itchome,,wikidata
+Z,4,Z04,Z,永田町,Nagatacho,Akasaka-mitsuke / Nagatacho,wikidata
+Z,5,Z05,Z,半蔵門,Hanzomon,,official
+Z,6,Z06,Z,九段下,Kudanshita,,wikidata
+Z,7,Z07,Z,神保町,Jimbocho,,official
+Z,8,Z08,Z,大手町,Otemachi,,official
+Z,9,Z09,Z,三越前,Mitsukoshimae,,wikidata
+Z,10,Z10,Z,水天宮前,Suitengumae,Ningyocho / Suitengumae,wikidata
+Z,11,Z11,Z,清澄白河,Kiyosumi-shirakawa,,official
+Z,12,Z12,Z,住吉,Sumiyoshi,,official
+Z,13,Z13,Z,錦糸町,Kinshicho,,wikidata
+Z,14,Z14,Z,押上,Oshiage,,wikidata
+N,1,N01,N,目黒,Meguro,,official
+N,2,N02,N,白金台,Shirokanedai,,wikidata
+N,3,N03,N,白金高輪,Shirokane-takanawa,,official
+N,4,N04,N,麻布十番,Azabu-juban,,wikidata
+N,5,N05,N,六本木一丁目,Roppongi-itchome,,wikidata
+N,6,N06,N,溜池山王,Tameike-sanno,Tameike-sanno / Kokkai-gijidomae,wikidata
+N,7,N07,N,永田町,Nagatacho,Akasaka-mitsuke / Nagatacho,wikidata
+N,8,N08,N,四ツ谷,Yotsuya,,wikidata
+N,9,N09,N,市ヶ谷,Ichigaya,,wikidata
+N,10,N10,N,飯田橋,Iidabashi,,wikidata
+N,11,N11,N,後楽園,Korakuen,,wikidata
+N,12,N12,N,東大前,Todaimae,,wikidata
+N,13,N13,N,本駒込,Hon-komagome,,wikidata
+N,14,N14,N,駒込,Komagome,,official
+N,15,N15,N,西ヶ原,Nishigahara,,wikidata
+N,16,N16,N,王子,Oji,,wikidata
+N,17,N17,N,王子神谷,Oji-kamiya,,wikidata
+N,18,N18,N,志茂,Shimo,,wikidata
+N,19,N19,N,赤羽岩淵,Akabane-iwabuchi,,wikidata
+F,1,F01,F,和光市,Wakoshi,,wikidata
+F,2,F02,F,地下鉄成増,Chikatetsu-narimasu,,wikidata
+F,3,F03,F,地下鉄赤塚,Chikatetsu-akatsuka,,wikidata
+F,4,F04,F,平和台,Heiwadai,,wikidata
+F,5,F05,F,氷川台,Hikawadai,,wikidata
+F,6,F06,F,小竹向原,Kotake-mukaihara,,wikidata
+F,7,F07,F,千川,Senkawa,,wikidata
+F,8,F08,F,要町,Kanamecho,,wikidata
+F,9,F09,F,池袋,Ikebukuro,,wikidata
+F,10,F10,F,雑司が谷,Zoshigaya,,wikidata
+F,11,F11,F,西早稲田,Nishi-waseda,,wikidata
+F,12,F12,F,東新宿,Higashi-shinjuku,,wikidata
+F,13,F13,F,新宿三丁目,Shinjuku-sanchome,,wikidata
+F,14,F14,F,北参道,Kita-sando,,wikidata
+F,15,F15,F,明治神宮前,Meiji-jingumae,,wikidata
+F,16,F16,F,渋谷,Shibuya,,wikidata
