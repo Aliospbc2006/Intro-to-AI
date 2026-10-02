@@ -11,12 +11,12 @@ Phạm vi:
 - Chỉ **Tokyo Metro**, gồm 9 tuyến: G (Ginza), M (Marunouchi, gồm cả nhánh Honancho), H (Hibiya), T (Tozai), C (Chiyoda), Y (Yurakucho), Z (Hanzomon), N (Namboku), F (Fukutoshin).
 - **Không** gồm JR, Toei Subway hay các tuyến tư nhân. Không mô hình việc tàu chạy liên thông sang các mạng khác.
 
-Tech stack: FastAPI, MongoDB (driver Motor, async), HTML + JavaScript thuần, Leaflet, Bootstrap.
+Tech stack: FastAPI, MongoDB (driver Motor, async), HTML + JavaScript thuần, Leaflet (không dùng framework/CDN CSS nào khác).
 
 ## 2. Project structure
 
 ```text
-frontend/             Giao diện web (HTML + JS thuần + Leaflet)
+frontend/             Giao diện web (HTML + CSS + JS thuần + Leaflet): store.js, map_layers.js, panel_*.js, app.js
 backend/
   app/
     services/path_finding.py   Thuật toán A* (không sửa khi chuyển sang dữ liệu Tokyo)
@@ -114,7 +114,7 @@ Trang dữ liệu: https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.h
 
 Thứ tự ga, mã ga và tên tiếng Anh trong `stations.csv` do project tổng hợp từ các nguồn trên.
 
-**OpenStreetMap** chỉ là **bản đồ nền** (tile) trong giao diện, © OpenStreetMap contributors. Nó không phải nguồn của dataset.
+**OpenStreetMap** chỉ là **bản đồ nền** (tile) trong giao diện, © OpenStreetMap contributors (ODbL). Nó không phải nguồn của dataset. Tile lấy từ server `tile.openstreetmap.de` của **OpenStreetMap Deutschland (FOSSGIS e.V.)**, không cần API key, dùng theo [điều khoản của FOSSGIS](https://www.fossgis.de/arbeitsgruppen/osm-server/nutzungsbedingungen/) (phù hợp mục đích học tập, lưu lượng thấp; cần giữ attribution và link báo lỗi bản đồ). Nhãn địa danh hiển thị theo tiếng địa phương kèm tiếng Đức.
 
 ## 6. Setup
 
@@ -171,12 +171,22 @@ Hai script chỉ dùng thư viện chuẩn của Python. Kết quả build khôn
 
 ## 7. Usage
 
-Bảng điều khiển nằm ở góc phải trên của bản đồ:
+Giao diện gồm **sidebar bên trái** và **bản đồ bên phải**. Sidebar có ba công tắc ở trên cùng và bốn tab:
 
-- **Show All**: hiển thị toàn bộ ga và các đoạn nối, tô theo màu tuyến.
-- **Find path**: bấm nút, click một điểm làm xuất phát, click điểm thứ hai làm đích (hệ thống chọn ga gần nhất với điểm click), nhập **Transfer Penalty** (mét, mặc định 2000) rồi bấm tìm. Kết quả hiện số lần đổi tuyến và tổng độ dài, bản đồ tự thu phóng để thấy trọn đường đi.
-- **Ban Mode**: click vào một ga hoặc một đoạn nối để vô hiệu hóa (`active = false`). Phần tử bị cấm không được dùng khi tìm đường.
-- **Show Banned**: xem các phần tử đã bị cấm; click để bỏ cấm.
+**Công tắc**
+
+- **Show All**: hiển thị toàn bộ ga và đoạn nối, tô theo màu tuyến.
+- **Show Banned**: hiển thị các ga/đoạn nối đã bị cấm (nét đứt màu đỏ).
+- **Ban Mode**: click vào một ga hoặc một đoạn nối trên bản đồ để cấm (`active = false`). Phần tử bị cấm không được dùng khi tìm đường. Thanh thông báo trên bản đồ cho biết đang ở Ban Mode.
+
+**Tab**
+
+- **Path**: click bản đồ để chọn ga xuất phát (A) và ga đích (B) (hệ thống chọn ga active gần nhất với điểm click), nhập **Transfer Penalty** (mét, mặc định 2000) rồi bấm **Find path**. Kết quả gồm khoảng cách, số lần đổi tuyến, số ga, chuỗi tuyến và danh sách ga; bản đồ tự thu phóng để thấy trọn đường đi. Có nút đổi chiều A/B và Reset.
+- **Lines**: 9 tuyến với màu, số ga và số đoạn nối. Click một tuyến để làm nổi bật trên bản đồ (click lại để bỏ).
+- **Segments**: 176 đoạn nối, tìm kiếm theo tên ga/tuyến/ID, lọc theo tuyến và trạng thái (All/Active/Inactive). Click một dòng để chọn đoạn nối trên bản đồ và mở popup; nút bên phải mỗi dòng để Ban/Unban.
+- **Stations**: 135 ga, tìm kiếm theo tên/ID, lọc theo tuyến và trạng thái. Click một dòng để bản đồ bay tới ga và mở popup; có Ban/Unban tương tự.
+
+Chọn trên bản đồ và chọn trong sidebar luôn đồng bộ hai chiều. Popup của đoạn nối/ga có nút Ban/Unban, và mỗi lần Ban/Unban có thông báo kèm nút Undo. Giao diện ưu tiên màn hình desktop, sidebar cuộn riêng; dưới 860px bản đồ nằm trên, sidebar nằm dưới.
 
 ## 8. Validation
 
@@ -184,7 +194,7 @@ Bảng điều khiển nằm ở góc phải trên của bản đồ:
 - Dataset tạo lại từ script cho ra file **giống hệt từng byte** với dataset đang dùng.
 - A\* được đối chiếu với Dijkstra (heuristic bằng 0) trên các route thử nghiệm: cost tối ưu giống nhau, với cả penalty 0 và 2000.
 - Gọi API thật (HTTP) cho cùng kết quả như chạy offline về độ dài, số lần đổi tuyến, thứ tự tuyến và danh sách ga.
-- Giao diện đã được kiểm tra bằng trình duyệt tự động: Show All, Find Path, thu phóng theo đường đi, Ban, Show Banned và Unban.
+- Giao diện đã được kiểm tra bằng trình duyệt tự động (Chrome headless): bốn tab, tìm kiếm/lọc, chọn đồng bộ với bản đồ, Find Path, Ban Mode, Show Banned và Unban.
 
 ## 9. Known limitations
 
@@ -194,13 +204,13 @@ Bảng điều khiển nằm ở góc phải trên của bản đồ:
 - Không mô hình thời gian đi bộ trong các ga chuyển tuyến. Transfer Penalty là tham số ưu tiên, không phải thời gian chuyển tuyến thực.
 - Chỉ có Tokyo Metro; chưa có JR, Toei hay tuyến tư nhân.
 - Màu tuyến chỉ để hiển thị, không phải màu chính thức.
-- Bản đồ nền cần **internet** và máy phải truy cập được `tile.openstreetmap.org`.
+- Bản đồ nền cần **internet** và máy phải truy cập được `tile.openstreetmap.de`.
 
 ### Nếu bản đồ nền (basemap) không hiện
 
-Bản đồ nền màu xám nhưng ga và đường đi vẫn hiển thị là lỗi mạng chứ không phải lỗi project. Nguyên nhân thường gặp là DNS của mạng (router) không phân giải được `tile.openstreetmap.org`. Bạn thử:
+Bản đồ nền màu xám nhưng ga và đường đi vẫn hiển thị là lỗi mạng chứ không phải lỗi project: trình duyệt không tải được tile. Project dùng `tile.openstreetmap.de` thay vì `tile.openstreetmap.org` vì có mạng (DNS của router) chặn cả domain `openstreetmap.org` bằng cách trả về `127.0.0.1`. Nếu mạng của bạn chặn cả `tile.openstreetmap.de`, bạn thử:
 
 - đổi sang mạng khác;
 - bật **Secure DNS** (DNS qua HTTPS) trong trình duyệt, hoặc đổi DNS của hệ thống.
 
-Mở thử https://tile.openstreetmap.org/12/3637/1612.png trong trình duyệt: nếu thấy một ô ảnh bản đồ là mạng đã ổn. Project không có cách vượt qua lỗi này trong code.
+Mở thử https://tile.openstreetmap.de/12/3637/1612.png trong trình duyệt: nếu thấy một ô ảnh bản đồ là mạng đã ổn.
