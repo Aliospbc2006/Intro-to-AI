@@ -48,10 +48,13 @@ APPROVED_COMPLEXES = {
 results = []
 
 
+# Ghi lại kết quả một phép kiểm tra; không dừng ngay khi lỗi để report() in đủ danh sách PASS/FAIL ở cuối
 def check(name, ok, detail=""):
     results.append((name, bool(ok), detail))
 
 
+# Lấy đúng hàm heuristic() đang chạy trong backend để kiểm tra dataset mà không cần import cả app (tránh phải có MongoDB):
+# parse file bằng ast, tách riêng FunctionDef heuristic rồi exec trong namespace chỉ có `math`.
 def load_heuristic():
     tree = ast.parse(PATH_FINDING.read_text(encoding="utf-8"))
     func = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "heuristic")
@@ -118,12 +121,15 @@ def main():
               for e in edges))
 
     # ---------------- A* admissibility ----------------
+    # Heuristic admissible nếu không bao giờ lớn hơn chi phí thật. slack = length - heuristic phải >= 0 ở mọi cạnh
+    # (và < 1 mm vì length chỉ được làm tròn lên tối đa 1 mm).
     slack = [p["length"] - heuristic(p["start"], p["end"], node_map) for p in props]
     check("A*: length >= heuristic(start, end) for every edge (tolerance 0)", all(s >= 0 for s in slack),
           f"min slack {min(slack):.6f} m, max slack {max(slack):.6f} m")
     check("A*: rounding up adds < 1 mm", all(s < 0.001 + 1e-9 for s in slack))
 
     # ---------------- Graph ----------------
+    # adjacency: ga -> các ga kề (bỏ qua tuyến) để kiểm tra liên thông; lines_at: ga -> các tuyến đi qua ga
     adjacency = defaultdict(set)
     lines_at = defaultdict(set)
     for p in props:
@@ -131,6 +137,7 @@ def main():
         adjacency[p["end"]].add(p["start"])
         lines_at[p["start"]].add(p["line"])
         lines_at[p["end"]].add(p["line"])
+    # Duyệt DFS từ một ga bất kỳ; graph liên thông nếu duyệt được hết mọi ga
     seen, stack = {ids[0]}, [ids[0]]
     while stack:
         for nxt in adjacency[stack.pop()]:
@@ -139,6 +146,7 @@ def main():
                 stack.append(nxt)
     check("graph: connected", len(seen) == len(nodes), f"{len(seen)}/{len(nodes)}")
     check("graph: no orphan nodes", all(i in adjacency for i in ids))
+    # Cạnh là vô hướng nên chuẩn hóa (min, max) để (a, b) và (b, a) cùng tuyến được tính là một cạnh
     keys = Counter((min(p["start"], p["end"]), max(p["start"], p["end"]), p["line"]) for p in props)
     check("graph: no duplicate (min, max, line)", all(c == 1 for c in keys.values()))
     check("graph: all 9 lines present", {p["line"] for p in props} == LINES)
@@ -154,6 +162,8 @@ def main():
     check("graph: M has exactly one branch node (Nakano-sakaue)", m_branch_nodes == ["Nakano-sakaue"], m_branch_nodes)
 
     # ---------------- Mapping from stations.csv (independent re-derivation) ----------------
+    # Tự tính lại kết quả mong đợi từ stations.csv bằng code riêng (không dùng code của build_dataset.py),
+    # nên nếu builder sai thì hai bên sẽ lệch nhau và check báo FAIL.
     node_key = {}  # name_ja -> expected node name
     for r in rows:
         node_key[r["name_ja"]] = r["complex"] or r["name_en"]
@@ -211,6 +221,7 @@ def main():
                 backtracks.append(f"{route}:{node_by_id[b]['properties']['name']}")
     check("mapping: no route turns back (station order vs geometry)", not backtracks, backtracks or "")
 
+    # A* làm việc trên state (node, line): mỗi cặp (ga, tuyến đi qua ga) là một state
     states = {(i, line) for i in ids for line in lines_at[i]}
     code_states = Counter((expected_id[node_key[r["name_ja"]]], r["line"]) for r in rows if r["code_source"] != "junction")
     check("mapping: each station code is its own (node, line) state", all(c == 1 for c in code_states.values()),

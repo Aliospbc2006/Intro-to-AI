@@ -10,9 +10,12 @@ async def create_collection_edges():
         await db.create_collection("edges")
         await db.edges.create_index({"geometry": "2dsphere"})
         await db.edges.create_index({"properties.id": 1})
+        # Index cho truy vấn tìm cạnh theo cặp ga (start, end) khi dựng response của /path/
         await db.edges.create_index({"properties.start": 1, "properties.end": 1})
+    # Đã có dữ liệu thì không seed lại
     if await db.edges.count_documents({}) > 0:
         return
+    # Seed: mỗi phần tử của edges.json là một GeoJSON Feature (LineString) nối hai ga
     with open(settings.BASE_DIR / "data" / "edges.json", "r", encoding="utf-8") as f:
         data = json.load(f)
         await db.edges.insert_many(data)
@@ -33,6 +36,7 @@ async def read_edge(id: int) -> EdgeFeature:
     return EdgeFeature.model_validate(edge)
 
 async def update_edge_active_status(id: int, active: bool):
+    # Ban/unban đoạn nối: chỉ đổi cờ properties.active, get_graph sẽ bỏ qua cạnh không active
     await db.edges.update_one({"properties.id": id}, {"$set": {"properties.active": active}})
 
 async def read_edges_by_active_status(is_active: bool = False) -> EdgeFeatureCollection:

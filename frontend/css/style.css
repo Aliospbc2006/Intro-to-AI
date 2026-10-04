@@ -1,3 +1,4 @@
+/* Biến màu dùng chung cho giao diện (nền, chữ, màu nhấn, màu ban/active) */
 :root {
     --bg: #f4f6fa;
     --surface: #ffffff;
@@ -49,6 +50,7 @@ p {
 }
 
 /* ---------- Layout ---------- */
+/* Chia hai cột: sidebar cố định 400px bên trái, bản đồ chiếm phần còn lại */
 .app {
     display: grid;
     grid-template-columns: 400px minmax(0, 1fr);
@@ -64,6 +66,7 @@ p {
     z-index: 2;
 }
 
+/* Khung chứa bản đồ; #map phủ kín khung (absolute) để banner và toast nằm chồng lên trên */
 .map-wrap {
     position: relative;
     min-width: 0;
@@ -440,6 +443,7 @@ p {
     transition: border-color .12s, box-shadow .12s, transform .12s;
 }
 
+/* Vạch màu bên trái thẻ, màu lấy từ biến --c được gán inline theo màu tuyến */
 .item::before {
     content: "";
     position: absolute;
@@ -448,6 +452,7 @@ p {
     background: var(--c, #94a3b8);
 }
 
+/* Trạng thái hover / selected (class .selected do panel_lists.js và panel_lines.js gắn) / inactive (đã bị ban) */
 .item:hover {
     border-color: #c7d2e2;
     transform: translateY(-1px);

@@ -1,4 +1,8 @@
 // Tab Segments + Stations: tìm kiếm / lọc / chọn, đồng bộ hai chiều với bản đồ
+// Một factory dùng cho cả hai tab. cfg quy định khác biệt giữa hai tab:
+//   panelId, tab, kind ('edge' | 'node'), noun, placeholder: định danh và nhãn
+//   source(): Map dữ liệu của store;  match(item, q, line): điều kiện tìm kiếm / lọc theo tuyến
+//   sort: hàm so sánh;  row(item): HTML của một hàng
 function makeListPanel(cfg) {
     const p = {
         el: document.getElementById(cfg.panelId),
@@ -24,6 +28,7 @@ function makeListPanel(cfg) {
             this.el.querySelector('select').addEventListener('change', (e) => { this.line = e.target.value; this.renderList(); });
             bindSegmented(this.el.querySelector('.seg'), (v) => { this.status = v; this.renderList(); });
 
+            // Event delegation trên cả danh sách: click nút Ban/Unban thì đảo trạng thái, click hàng thì chọn trên bản đồ
             this.listEl.addEventListener('click', (ev) => {
                 const row = ev.target.closest('[data-id]');
                 if (!row) return;
@@ -31,17 +36,22 @@ function makeListPanel(cfg) {
                 if (ev.target.closest('[data-act="toggle"]')) { net.toggle(cfg.kind, id); return; }
                 net.select(cfg.kind, id);
             });
+            // Rê chuột lên hàng thì làm nổi mục tương ứng trên bản đồ
             this.listEl.addEventListener('mouseover', (ev) => {
                 const row = ev.target.closest('[data-id]');
                 if (row) net.setHover(cfg.kind, Number(row.dataset.id));
             });
             this.listEl.addEventListener('mouseleave', () => net.setHover(null));
 
+            // Ban/unban một ga ảnh hưởng cả hai danh sách (hàng đoạn nối hiện cảnh báo "station banned"),
+            // còn ban một đoạn nối chỉ ảnh hưởng danh sách đoạn nối
             store.on('active', ({ kind }) => { if (kind === 'node' || cfg.kind === 'edge') this.renderList(); });
+            // Chiều bản đồ → sidebar: chọn trên bản đồ thì đánh dấu và cuộn tới hàng tương ứng
             store.on('selection', () => this.markSelected(true));
             this.renderList();
         },
 
+        // Kết hợp bộ lọc trạng thái (All / Active / Inactive) với điều kiện riêng của từng tab (cfg.match)
         match(it) {
             if (this.status === 'active' && !it.active) return false;
             if (this.status === 'inactive' && it.active) return false;
@@ -55,6 +65,7 @@ function makeListPanel(cfg) {
             this.markSelected(false);
         },
 
+        // Đánh dấu hàng đang được chọn (net.state.selected). Chỉ cuộn tới hàng khi đang xem đúng tab này.
         markSelected(scroll) {
             const s = net.state.selected;
             let found = null;

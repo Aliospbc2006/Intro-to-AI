@@ -1,3 +1,4 @@
+// Khởi tạo bản đồ Leaflet ở trung tâm Tokyo; biến toàn cục `map` được các file js khác dùng chung
 const map = L.map('map', {
     center: [35.6812, 139.7671],
     zoom: 12,

@@ -16,6 +16,7 @@ function setTab(tab) {
     if (tab === 'segments') segmentsPanel.markSelected(false);
 }
 
+// Banner trên bản đồ báo chế độ hiện tại (Ban Mode hoặc đang chọn điểm A/B); ẩn khi không có chế độ đặc biệt
 function updateBanner() {
     const b = document.getElementById('mapBanner');
     const s = net.state;
@@ -33,6 +34,8 @@ function updateBanner() {
     }
 }
 
+// Gắn công tắc trên sidebar với một cờ trong net.state (showAll / showBanned / banMode);
+// đổi cờ xong phải net.refresh() để vẽ lại style của toàn bộ ga và đoạn nối
 function bindToggle(id, key) {
     document.getElementById(id).addEventListener('change', (e) => {
         net.state[key] = e.target.checked;
@@ -42,6 +45,8 @@ function bindToggle(id, key) {
     });
 }
 
+// Thứ tự khởi động quan trọng: phải có dữ liệu trong store trước, vì net.build() và init() của các panel đều đọc từ store.
+// Các script được nạp theo thứ tự trong index.html: load_map → ui → store → map_layers → panel_* → app.
 (async function main() {
     const err = document.getElementById('loadError');
     try {

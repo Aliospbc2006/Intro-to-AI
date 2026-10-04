@@ -4,6 +4,7 @@ const pathPanel = {
     start: null,          // id ga
     end: null,
     picking: 'start',     // 'start' | 'end' | null
+    // Phí đổi tuyến (mét) gửi lên backend; cộng vào chi phí của A* mỗi lần đổi tuyến
     penalty: 2000,
     result: null,         // {fc, legs, ids, lines}
     busy: false,
@@ -29,6 +30,8 @@ const pathPanel = {
         this.setPoint(this.picking, n.id);
     },
 
+    // Đặt ga đi/đến. Đổi điểm thì kết quả cũ không còn đúng nên xóa.
+    // Tự chuyển sang chọn điểm còn thiếu; đủ cả hai điểm thì dừng chọn (picking = null).
     setPoint(which, id) {
         this[which] = id;
         net.setPin(which, id);
@@ -74,6 +77,7 @@ const pathPanel = {
         }
     },
 
+    // Gọi backend tìm đường. busy chặn bấm nhiều lần khi đang chờ phản hồi.
     async find() {
         const a = store.nodes.get(this.start), b = store.nodes.get(this.end);
         if (!a || !b || this.busy) return;
@@ -82,10 +86,14 @@ const pathPanel = {
         this.render();
         try {
             const pen = Number(this.penalty);
+            // Backend nhận tọa độ chứ không nhận id ga: gửi đúng tọa độ hai ga đã chọn thì
+            // find_nearest_node sẽ trả lại chính hai ga đó. penalty không hợp lệ thì dùng mặc định 2000.
             const q = new URLSearchParams({
                 lon1: a.lon, lat1: a.lat, lon2: b.lon, lat2: b.lat,
                 penalty: Number.isFinite(pen) && pen >= 0 ? pen : 2000,
             });
+            // GET /path/ → GeoJSON FeatureCollection của đường đi (xem net.showRoute),
+            // hoặc { message: "Path not found" } không có "features" khi hai ga không nối được
             const res = await fetch(`${API}/path/?${q}`);
             if (!res.ok) throw new Error('HTTP ' + res.status);
             const fc = await res.json();
@@ -107,6 +115,8 @@ const pathPanel = {
     },
 
     // Gom các chặng liên tiếp cùng tuyến
+    // ids có n ga, lines có n - 1 phần tử: lines[i] là tuyến đi từ ids[i] tới ids[i+1].
+    // Mỗi leg = { line, from, to, hops }: from/to là chỉ số trong ids, hops là số đoạn trong chặng.
     summarize(fc) {
         const p = fc.properties;
         const ids = p.id, lines = p.line;
@@ -118,6 +128,8 @@ const pathPanel = {
         return { fc, ids, lines, legs, transfers: p.total_transfers, length: p.length };
     },
 
+    // Event delegation: panel được render lại bằng innerHTML nên chỉ gắn một listener ở panel,
+    // nút nào được bấm thì xác định qua thuộc tính data-act của nó
     onClick(ev) {
         const t = ev.target.closest('[data-act]');
         if (!t) return;
@@ -142,6 +154,7 @@ const pathPanel = {
         </div>`;
     },
 
+    // Dựng lại toàn bộ HTML của tab từ trạng thái hiện tại (start, end, picking, penalty, result, error)
     render() {
         const ready = this.start != null && this.end != null;
         const chips = [0, 500, 1000, 2000, 5000].map((v) =>

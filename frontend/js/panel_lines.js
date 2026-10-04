@@ -9,10 +9,12 @@ const linesPanel = {
             if (it) this.focus(it.dataset.line);
             else if (ev.target.closest('[data-act="clear"]')) this.focus(null);
         });
+        // Render lại khi tuyến đang highlight đổi, hoặc khi ban/unban làm đổi số ga/đoạn bị ban của tuyến
         store.on('lineFocus', () => this.render());
         store.on('active', () => this.render());
     },
 
+    // Click lại đúng tuyến đang highlight thì bỏ highlight (toggle); chỉ zoom vào tuyến khi bật, không zoom khi tắt
     focus(code) {
         net.focusLine(net.state.lineFocus === code ? null : code, { fit: code !== null });
     },

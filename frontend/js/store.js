@@ -12,6 +12,8 @@ const store = {
     lines: new Map(),   // code -> {code, name, color, nodeIds:Set, edgeIds:[]}
     _h: {},
 
+    // Event bus đơn giản: các panel và bản đồ không gọi nhau trực tiếp mà đăng ký lắng nghe sự kiện.
+    // Sự kiện đang dùng: 'active' (ban/unban), 'selection' (chọn/bỏ chọn ga hoặc đoạn), 'lineFocus' (highlight tuyến).
     on(evt, fn) { (this._h[evt] ||= []).push(fn); },
     emit(evt, data) { (this._h[evt] || []).forEach((fn) => fn(data)); },
 
@@ -21,6 +23,9 @@ const store = {
             if (!res.ok) throw new Error(`${p} → HTTP ${res.status}`);
             return res.json();
         };
+        // GET /nodes/ và GET /edges/ đều trả GeoJSON FeatureCollection:
+        //   Point      → một ga (properties: id, name, active)
+        //   LineString → một đoạn nối giữa hai ga (properties: id, start, end, line, color, length, active)
         const [nodeFc, edgeFc] = await Promise.all([get('/nodes/'), get('/edges/')]);
 
         nodeFc.features.forEach((f) => {
@@ -37,10 +42,13 @@ const store = {
             this.edges.set(p.id, {
                 id: p.id, start: p.start, end: p.end, line: p.line, color: p.color,
                 length: p.length, active: p.active,
+                // GeoJSON lưu [lon, lat] còn Leaflet cần [lat, lon] nên đảo thứ tự ở đây một lần
                 coords: f.geometry.coordinates.map(([lo, la]) => [la, lo]),
             });
         });
 
+        // Dựng thông tin theo tuyến từ danh sách edge (API không có endpoint riêng cho tuyến):
+        // mỗi tuyến gom các edge + ga của nó, và mỗi ga ghi nhớ nó thuộc những tuyến nào (n.lines)
         this.edges.forEach((e) => {
             let l = this.lines.get(e.line);
             if (!l) {
@@ -64,6 +72,8 @@ const store = {
             body: JSON.stringify(active),
         });
         if (!res.ok) throw new Error('HTTP ' + res.status);
+        // Chỉ cập nhật trạng thái cục bộ sau khi server xác nhận, rồi phát 'active'
+        // để bản đồ và các panel tự vẽ lại
         (kind === 'node' ? this.nodes : this.edges).get(id).active = active;
         this.emit('active', { kind, id, active });
     },
